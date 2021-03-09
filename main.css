@@ -104,3 +104,8 @@ button.btn {
 #playerWon {
   text-align: center;
 }
+
+#OutputText{
+  text-align: bottom;
+
+}
