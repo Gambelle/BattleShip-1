@@ -4,6 +4,7 @@ let $tiles = $(".myBoard1 button");
 // orientation of ship placement
 let orientation = "neither";
 
+
 //will later store 2D arrays of the coordiantes for the players ships.
 //The arrays are filled with the returnIdsOfShip function. The largest ships are stored at the beginning of the array and the 1x1 ship is stored in the end.
 let player1Ships = [];
@@ -75,6 +76,8 @@ let numberOfShipsPlaced;
 $(".myBoard1 button").click(function() {
 
   /* DOM Manipulation */
+
+  
 
   $(".myBoard1 button").attr("disabled", "true");
   $(this).removeAttr("disabled");
@@ -597,12 +600,13 @@ function whenTileClicked2($board, myBoardBtns) {
         {
             player2Ships = returnIdsOfShip();
         }
-        doneWithPlacingShip($board);
+        
         $(".myBoard2 button").attr("disabled", "true");
       } else {
         $(".myBoard2 button").attr("disabled", "true");
         return false;
       }
+      doneWithPlacingShip($board);
     break;
 
     default:
@@ -666,6 +670,8 @@ function changeTurn(gameOver) {
     alert("Opponent's Turn");
     $("#player1OuterContainer").toggleClass("outer-container");
     $("#player2OuterContainer").toggleClass("outer-container");
+    
+    
   }
 }
 
